@@ -55,7 +55,7 @@ class App extends React.Component {
 
         } 
       </div>
-    ) //is item.id needed?
+    ) 
   }
 }
 
