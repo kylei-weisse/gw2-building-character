@@ -44,11 +44,12 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1> List of Characters for Naked Fiddle.6809:</h1> { //Make the character name live instead of hardcoded
+        <h1> List of Characters for Naked Fiddle.6809:</h1> { //TODO: Make the character name live instead of hardcoded
+
+          //item is just the list of names, so right now I'm making a map that all it does is iterate over the list of names.
           items.map((item) => (
-            <ol key = {item.id} > 
-              { item }, 
-              { item.race }
+            <ol key = {item} > 
+              { item }
             </ol>
           ))
         } 
