@@ -15,7 +15,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      items: [],
+      names: [],
       DataisLoaded: false
     };
   }//end of constructor
@@ -27,7 +27,7 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((json) => {
         this.setState({
-          items: json,
+          names: json,
           DataisLoaded: true
         });
       })
@@ -35,7 +35,7 @@ class App extends React.Component {
 
   //render is the only field that is required
   render() {
-    const { DataisLoaded, items } = this.state;
+    const { DataisLoaded, names } = this.state;
     if (!DataisLoaded) return(
       <div>
         <h1> loading, we hope </h1>
@@ -47,11 +47,12 @@ class App extends React.Component {
         <h1> List of Characters for Naked Fiddle.6809:</h1> { //TODO: Make the character name live instead of hardcoded
 
           //item is just the list of names, so right now I'm making a map that all it does is iterate over the list of names.
-          items.map((item) => (
-            <ol key = {item} > 
-              { item }
+          names.map((name) => (
+            <ol key = {name} > 
+              { name }
             </ol>
           ))
+
         } 
       </div>
     ) //is item.id needed?
