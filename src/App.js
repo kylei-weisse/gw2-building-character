@@ -15,7 +15,11 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      //list of character names
       names: [],
+      //the currently selected character
+      curentName: "",
+      //did the data load?
       DataisLoaded: false
     };
   }//end of constructor
