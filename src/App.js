@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
 
-
 //component lifecycle, relevant here:
 //first constructor
 //then render
@@ -24,8 +23,8 @@ class App extends React.Component {
   //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
   componentDidMount() {
     fetch(
-      "https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
+      "https://api.guildwars2.com/v2/characters?access_token=DD1F3448-A7BC-C24E-97E5-40C4C25EC52E8DEC9F3F-F898-4729-88FC-6ABBC8B1DB9A")
+      .then((response) => response.json())
       .then((json) => {
         this.setState({
           items: json,
@@ -35,44 +34,27 @@ class App extends React.Component {
   }
 
   render() {
-    //let's check if DataisLoaded
+    //let's check if DataisLoaded. I'm a little confused here as to the contents of "items", hopefully I'll get it as I continue down the code.
     const { DataisLoaded, items } = this.state;
     if (!DataisLoaded) return(
       <div>
-        <h1> pleebe wait some time </h1>
+        <h1> loading, we hope </h1>
       </div>
     )
 
     return (
       <div className="App">
-        <h1> sup </h1>
+        <h1> List of Characters for Naked Fiddle.6809:</h1> {
+          items.map((item) => (
+            <ol key = {item.id} >
+              <li>{ item }</li>
+            </ol>
+          ))
+        }
       </div>
     )
   }
 }
 
-
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
 
 export default App;
