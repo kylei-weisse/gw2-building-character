@@ -44,15 +44,16 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1> List of Characters for Naked Fiddle.6809:</h1> {
+        <h1> List of Characters for Naked Fiddle.6809:</h1> { //Make the character name live instead of hardcoded
           items.map((item) => (
-            <ol key = {item.id} >
-              { item }
+            <ol key = {item.id} > 
+              { item }, 
+              { item.race }
             </ol>
           ))
-        }
+        } 
       </div>
-    )
+    ) //is item.id needed?
   }
 }
 
