@@ -16,3 +16,5 @@ class Build extends React.Component{
         )
     }
 }
+
+export default Build;
