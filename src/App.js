@@ -22,16 +22,30 @@ class App extends React.Component {
   }//end of constructor
 
   //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
-  // componentDidMount() {
-  //   fetch(
-  //     "https://jsonplaceholder.typicode.com/users")
-  //     .then((res) => res.json())
-  // }
+  componentDidMount() {
+    fetch(
+      "https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((json) => {
+        this.setState({
+          items: json,
+          DataisLoaded: true
+        });
+      })
+  }
 
   render() {
+    //let's check if DataisLoaded
+    const { DataisLoaded, items } = this.state;
+    if (!DataisLoaded) return(
+      <div>
+        <h1> pleebe wait some time </h1>
+      </div>
+    )
+
     return (
       <div className="App">
-        <h1> testing </h1>
+        <h1> sup </h1>
       </div>
     )
   }
