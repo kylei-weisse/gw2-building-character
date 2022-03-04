@@ -2,7 +2,14 @@ import logo from './logo.svg'; //can I delete this yet?
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
 
-//putting App into a class.
+
+//component lifecycle, relevant here:
+//first constructor
+//then render
+//finally componentDidMount()
+
+
+//putting App into a class, rather than a function as the boilerplate.
 class App extends React.Component {
   
   //Constructor
@@ -12,9 +19,18 @@ class App extends React.Component {
     this.state = {
       items: [],
       DataisLoaded: false
-    }
-  }
+    };
+  }//end of constructor
 
+  //ComponentDidMount happens after render() 
+
+  render() {
+    return (
+      <div className="App">
+        <h1> testing </h1>
+      </div>
+    )
+  }
 }
 
 
