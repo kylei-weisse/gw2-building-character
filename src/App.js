@@ -1,4 +1,3 @@
-import logo from './logo.svg'; //can I delete this yet?
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
 
