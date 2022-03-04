@@ -22,7 +22,12 @@ class App extends React.Component {
     };
   }//end of constructor
 
-  //ComponentDidMount happens after render() 
+  //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
+  // componentDidMount() {
+  //   fetch(
+  //     "https://jsonplaceholder.typicode.com/users")
+  //     .then((res) => res.json())
+  // }
 
   render() {
     return (
