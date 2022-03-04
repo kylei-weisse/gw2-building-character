@@ -33,8 +33,8 @@ class App extends React.Component {
       })
   }
 
+  //render is the only field that is required
   render() {
-    //let's check if DataisLoaded. I'm a little confused here as to the contents of "items", hopefully I'll get it as I continue down the code.
     const { DataisLoaded, items } = this.state;
     if (!DataisLoaded) return(
       <div>
@@ -47,7 +47,7 @@ class App extends React.Component {
         <h1> List of Characters for Naked Fiddle.6809:</h1> {
           items.map((item) => (
             <ol key = {item.id} >
-              <li>{ item }</li>
+              { item }
             </ol>
           ))
         }
