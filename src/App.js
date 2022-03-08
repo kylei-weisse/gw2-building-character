@@ -7,8 +7,9 @@ import React from 'react'; //do I need to use this everywhere?
 //finally componentDidMount()
 
 
-//putting App into a class, rather than a function as the boilerplate.
-class App extends React.Component {
+//CharacterList
+//TODO: turn this into a router with dynamic routing, so each character you click on is a link, and any new characters/ different accounts are also links.
+class CharacterList extends React.Component {
   
   //Constructor
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends React.Component {
       })
   }
 
+
   //render is the only field that is required
   render() {
     const { DataisLoaded, names } = this.state;
@@ -64,4 +66,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default CharacterList;
