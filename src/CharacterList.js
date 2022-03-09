@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
+import { Link } from "react-router-dom"
 
 //component lifecycle, relevant here:
 //first constructor
@@ -55,7 +56,7 @@ class CharacterList extends React.Component {
           //a map that iterates over the list of names.
           names.map((name) => (
             <ol key = {name} > 
-              { name }
+              <Link to={"/characters/"+ name }>{name}</Link>
             </ol>
           ))
 

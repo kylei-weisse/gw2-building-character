@@ -21,7 +21,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="characterlist" element={<CharacterList />} />
-          <Route path="character" element={<Character />} />
+          <Route path="characters/:characterID" element={<Character />} />
         </Route>
       </Routes>
     </BrowserRouter>,
