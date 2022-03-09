@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 import './index.css';
 import App from './App';
+
+//router imports
 import CharacterList from './CharacterList';
+import Character from './Character';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="characterList" element={<CharacterList />} />
+          <Route path=":characterID" element={<Character />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>,
 
   </React.StrictMode>,
   document.getElementById('root')

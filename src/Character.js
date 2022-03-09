@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
 
-class Builds extends React.Component{
+class Character extends React.Component{
     constructor(props){
         super(props);
     }
@@ -12,9 +12,9 @@ class Builds extends React.Component{
 
     render(){
         return(
-            <h1>succesfully made it to the builds component!</h1>
+            <h1>succesfully made it to the Character component!</h1>
         )
     }
 }
 
-export default Builds;
+export default Character;
