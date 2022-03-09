@@ -1,20 +1,12 @@
 import './App.css';
 import React from 'react'; //do I need to use this everywhere?
+import { useParams } from "react-router-dom";
 
-class Character extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
-    componentDidMount() {
-
-    }
-
-    render(){
+export default function Character(props){
+    let params = useParams();
         return(
-            <h1>succesfully made it to the Character component!</h1>
+            <h1>This is {params.characterID}'s page</h1>
         )
-    }
+
 }
 
-export default Character;
