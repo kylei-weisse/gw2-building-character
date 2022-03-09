@@ -20,8 +20,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="characterList" element={<CharacterList />} />
-          <Route path=":characterID" element={<Character />} />
+          <Route path="characterlist" element={<CharacterList />} />
+          <Route path="character" element={<Character />} />
         </Route>
       </Routes>
     </BrowserRouter>,
