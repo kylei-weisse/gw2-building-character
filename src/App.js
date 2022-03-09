@@ -1,7 +1,17 @@
 import { render } from "react-dom";
-import App from "./App";
+import React from "react";
+import CharacterList from "./CharacterList";
 
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+
+class App extends React.Component{
+ render() {
+     return(
+     <>
+        <CharacterList/>
+     </>
+     )
+ }
+}
+
 
 export default App;

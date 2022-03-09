@@ -27,6 +27,7 @@ class CharacterList extends React.Component {
 
   //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
   componentDidMount() {
+    console.log("in characterList");
     fetch(
       "https://api.guildwars2.com/v2/characters?access_token=DD1F3448-A7BC-C24E-97E5-40C4C25EC52E8DEC9F3F-F898-4729-88FC-6ABBC8B1DB9A")
       .then((response) => response.json())
