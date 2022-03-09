@@ -1,17 +1,31 @@
-import { render } from "react-dom";
-import React from "react";
-import CharacterList from "./CharacterList";
-
-
-class App extends React.Component{
- render() {
-     return(
-     <>
-        <CharacterList/>
-     </>
-     )
- }
+export default function App() {
+    return (
+    <div>
+      <h1>Bookkeeper!</h1>
+    </div>
+    )
 }
 
 
-export default App;
+// import React from "react";
+
+
+
+// import {
+//     BrowserRouter,
+//     Routes,
+//     Route,
+// } from "react-router-dom";
+
+// class App extends React.Component{
+//  render() {
+//      return(
+//      <>
+
+//      </>
+//      )
+//  }
+// }
+
+
+// export default App;
