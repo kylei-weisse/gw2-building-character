@@ -16,18 +16,19 @@ export default function Character() {
         "https://api.guildwars2.com/v2/characters/" + params.characterID + "?access_token=" + token)
         .then((response) => response.json())
         .then((json) => {
-            this.setState({
-                names: json,
+            setCharacter({
+                character: json,
                 dataIsLoaded: true
             });
         })
     }
 
-
+    console.log(character)
 
     return (
         <>
             <h1>{params.characterID}</h1>
+            
         </>
     )
 
