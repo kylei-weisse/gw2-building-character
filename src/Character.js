@@ -23,12 +23,20 @@ export default function Character() {
         })
     }
 
-    console.log(character)
+    
+    let helmAquatic = "jkl"
+    if (character) {
+        console.log(character.character.equipment)
+        
+        helmAquatic = character.character.equipment[0].id.toString()
+    }
+    else {console.log("loading")}
+
 
     return (
         <>
             <h1>{params.characterID}</h1>
-            
+            <h5>{helmAquatic}</h5>
         </>
     )
 
