@@ -52,7 +52,7 @@ class CharacterList extends React.Component {
 
     return (
       <div className="App">
-        <h1> List of Characters for Naked Fiddle.6809:</h1> { 
+        <h1 className='banner'> List of Characters for Naked Fiddle.6809:</h1> { 
 
           //a map that iterates over the list of names.
           names.map((name) => (
