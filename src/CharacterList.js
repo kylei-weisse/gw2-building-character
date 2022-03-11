@@ -7,6 +7,8 @@ import { Link } from "react-router-dom"
 //then render
 //finally componentDidMount()
 
+var token = "DD1F3448-A7BC-C24E-97E5-40C4C25EC52E8DEC9F3F-F898-4729-88FC-6ABBC8B1DB9A"
+
 //CharacterList
 //TODO: turn this into a router with dynamic routing, so each character you click on is a link, and any new characters/ different accounts are also links.
 class CharacterList extends React.Component {
@@ -28,7 +30,7 @@ class CharacterList extends React.Component {
   //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
   componentDidMount() {
     fetch(
-      "https://api.guildwars2.com/v2/characters?access_token=DD1F3448-A7BC-C24E-97E5-40C4C25EC52E8DEC9F3F-F898-4729-88FC-6ABBC8B1DB9A")
+      "https://api.guildwars2.com/v2/characters?access_token="+token)
       .then((response) => response.json())
       .then((json) => {
         this.setState({
