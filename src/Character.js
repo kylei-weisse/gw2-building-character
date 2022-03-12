@@ -24,10 +24,10 @@ export default function Character() {
             <h1> hello {params.characterID}! </h1> 
             {
             character.equipment.map(
-                (item) => (
+                (item, index) => (
                     //start jsx harmony using "<"
-                    <div key={item.id}>
-
+                    <div key={`${index}:${item.id}`}> 
+                        <Equipment item={item}/>
                     </div>
                 )
                 )
@@ -36,6 +36,6 @@ export default function Character() {
     )
 }
 
-function Equipment({equipment}) {
-    return (<div>{equipment.id}</div>)
+function Equipment({item}) {
+    return (<div>{item.id}</div>)
 }
