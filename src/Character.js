@@ -39,38 +39,3 @@ export default function Character() {
 function Equipment({equipment}) {
     return (<div>{equipment.id}</div>)
 }
-
-{/*keys have to be: 
-    unique
-    consistent
-    not the index???
-
-     index  0   1  2   3   4
-       x = [5, 10, 15, 20, 25]
-    x.pop(2)
-      index  0   1   2   3
-        x = [5, 10, 20, 25]
-    
-*/} 
-
-
-
-
-function List({items}) {
-    return (items.map((item, index) => <div key={index}>{ item }</div>)) 
-}
-
-function App({initial}) {
-    const [items, setItems] = useState(initial)
-    
-    const changeItems = () => {
-        setItems([8, 9, 10, 11])
-    }
-    
-    return (<>
-        <List items={items} />
-        <button onclick={() => changeItems()} />
-    </>)
-}
-
-<App initial={[10, 20, 30, 40]} />
