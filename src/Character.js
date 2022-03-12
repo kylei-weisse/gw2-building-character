@@ -19,47 +19,58 @@ export default function Character() {
         return (<div>Loading ... </div>)
     }
 
-    /*
-    //all equipment. Note that this is stats not skins.
-    let helmAquatic, backpack, coat, boots, gloves = null
-
-
-    //TODO: put this in the promise chain
-    //TODO, bonus: put this in State
-    if (character) {
-        console.log(character.character.equipment)
-
-        helmAquatic = character.character.equipment[0].id.toString()
-        backpack = character.character.equipment[1].id.toString()
-        coat = character.character.equipment[2].id.toString()
-        boots = character.character.equipment[3].id.toString()
-        gloves = character.character.equipment[4].id.toString()
-
-
-        // fetch(
-        //     "https://api.guildwars2.com/v2/items"+coat+"?access_token="+token
-        // )
-        // .then((response) => response.json())
-        // .then((json) => { //this is probably wrong
-        //     setCharacter({
-        //         coat: json.name
-        //     })
-        // })
-    } else { console.log("loading") }
-    */
-
     return ( 
         <>
-            <h1> {params.characterID} </h1> 
-            <Equipment helmet={params.helmet}></Equipment>
-            {params.characterID /* fetch api using characterID */}
+            <h1> hello {params.characterID}! </h1> 
+            {
+            character.equipment.map(
+                (item) => (
+                    //start jsx harmony using "<"
+                    <div key={item.id}>
+
+                    </div>
+                )
+                )
+            }
         </>
-                            )
-
-
+    )
 }
 
 function Equipment({equipment}) {
     return (<div>{equipment.id}</div>)
 }
 
+{/*keys have to be: 
+    unique
+    consistent
+    not the index???
+
+     index  0   1  2   3   4
+       x = [5, 10, 15, 20, 25]
+    x.pop(2)
+      index  0   1   2   3
+        x = [5, 10, 20, 25]
+    
+*/} 
+
+
+
+
+function List({items}) {
+    return (items.map((item, index) => <div key={index}>{ item }</div>)) 
+}
+
+function App({initial}) {
+    const [items, setItems] = useState(initial)
+    
+    const changeItems = () => {
+        setItems([8, 9, 10, 11])
+    }
+    
+    return (<>
+        <List items={items} />
+        <button onclick={() => changeItems()} />
+    </>)
+}
+
+<App initial={[10, 20, 30, 40]} />
