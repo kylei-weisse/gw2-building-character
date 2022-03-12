@@ -8,12 +8,14 @@ import { token } from './Api'
 export default function Character() {
     
     const[character, setCharacter] = useState(null)
+    const[isLoaded, stillLoading] = useState(true)
 
     let params = useParams()
 
     if (!character){
         fetch(
-        "https://api.guildwars2.com/v2/characters/" + params.characterID + "?access_token=" + token)
+        "https://api.guildwars2.com/v2/characters/" + params.characterID + "?access_token=" + token
+        )
         .then((response) => response.json())
         .then((json) => {
             setCharacter({
@@ -28,6 +30,7 @@ export default function Character() {
 
 
     //TODO: put this in the promise chain
+    //TODO, bonus: put this in State
     if (character) {
         console.log(character.character.equipment)
         
@@ -36,6 +39,16 @@ export default function Character() {
         coat = character.character.equipment[2].id.toString()
         boots = character.character.equipment[3].id.toString()
         gloves = character.character.equipment[4].id.toString()
+
+        // fetch(
+        //     "https://api.guildwars2.com/v2/items"+coat+"?access_token="+token
+        // )
+        // .then((response) => response.json())
+        // .then((json) => { //this is probably wrong
+        //     setCharacter({
+        //         coat: json.name
+        //     })
+        // })
     }
     else {console.log("loading")}
 

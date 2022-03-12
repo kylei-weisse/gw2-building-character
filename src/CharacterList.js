@@ -14,26 +14,24 @@ import './App.css';
 //CharacterList
 //TODO: turn this into a router with dynamic routing, so each character you click on is a link, and any new characters/ different accounts are also links.
 export default class CharacterList extends React.Component {
-  
-  //Constructor
-  constructor(props) {
-    super(props);
 
+  //Constructor
+  constructor() {
+    super()
+    
     this.state = {
       //list of character names
       names: [],
-      //the currently selected character
-      curentName: "",
       //did the data load?
       dataIsLoaded: false,
       token: token
     };
-  }//end of constructor
+  } //end of constructor
 
   //ComponentDidMount happens after render(), so any dom updates from render will have already loaded.
   componentDidMount() {
     fetch(
-      "https://api.guildwars2.com/v2/characters?access_token="+token)
+      "https://api.guildwars2.com/v2/characters?access_token=" + token)
       .then((response) => response.json())
       .then((json) => {
         this.setState({
@@ -47,7 +45,7 @@ export default class CharacterList extends React.Component {
   //render is the only field that is required
   render() {
     const { dataIsLoaded, names } = this.state;
-    if (!dataIsLoaded) return(
+    if (!dataIsLoaded) return (
       <div>
         <h1> loading, we hope </h1>
       </div>
@@ -55,20 +53,18 @@ export default class CharacterList extends React.Component {
 
     return (
       <div className="App">
-        <h1 className='banner'> List of Characters for Naked Fiddle.6809:</h1> { 
-
-          //a map that iterates over the list of names.
-          names.map((name) => (
-            <ol key = {name} > 
-              <Link to={"/characters/"+ name }>{name}</Link>
-            </ol>
-          ))
-
-        } 
+        <h1 className='banner' > List of Characters for Naked Fiddle .6809: </h1> 
+        <ol>
+          { names.map((name) => (<li key={name} ><CharacterListItem name={name} numbers={[1,23,4]}/></li>)) } 
+        </ol>
       </div>
-    ) 
+    )
   }
 }
 
-
-
+class CharacterListItem extends React.Component {
+  render() {
+    console.log(this.props)
+    return <Link to={"/characters/" + this.props.name}> {this.props.name} </Link> 
+  }
+}
