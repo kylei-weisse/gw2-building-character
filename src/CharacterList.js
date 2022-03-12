@@ -52,22 +52,22 @@ export default class CharacterList extends React.Component {
     )
 
     return (
-      // jsx harmony starts with the open div
+      // jsx harmony starts 
       <div className="App">
         <h1 className='banner' > List of Characters for Naked Fiddle .6809: </h1> 
         <ol>
-          {/* jsx harmony ends with the open curlies, so this and the next section are both javascript */}
+          {/* jsx harmony ends  */}
           { names.map((name) => ( 
-            // jsx harmony starts again
+            // jsx harmony starts 
             <li key={name} >
               <CharacterListItem name={name} />
             </li>
-            // jsx harmony ends here
+            // jsx harmony ends 
           )) } 
-          {/* jsx harmony starts again */}
+          {/* jsx harmony starts  */}
         </ol>
       </div>
-      //jsx harmony ends at the close div
+      //jsx harmony ends
     )
   }
 }
