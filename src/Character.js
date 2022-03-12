@@ -43,11 +43,11 @@ export default function Character() {
     return (
         <>
             <h1>{params.characterID}</h1>
-            <h5>{helmAquatic}</h5>
-            <h5>{backpack}</h5>
-            <h5>{coat}</h5>
-            <h5>{boots}</h5>
-            <h5>{gloves}</h5>
+            <h5>mouth breather is {helmAquatic}, which is only relevant under water.</h5>
+            <h5>backpack is {backpack}</h5>
+            <h5>coat is {coat}</h5>
+            <h5>boots are {boots}</h5>
+            <h5>gloves are {gloves}</h5>
         </>
     )
 
