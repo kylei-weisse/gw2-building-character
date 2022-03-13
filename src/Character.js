@@ -37,5 +37,10 @@ export default function Character() {
 }
 
 function Equipment({item}) {
-    return (<div>{item.id}</div>)
+    console.log(item)
+    var viewer =item.id
+    if (item.stats.attributes.power){
+        viewer+="\npower: "+item.stats.attributes.power
+    } 
+    return (<div>{viewer}</div>)
 }
