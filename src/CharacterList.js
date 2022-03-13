@@ -74,7 +74,6 @@ export default class CharacterList extends React.Component {
 
 class CharacterListItem extends React.Component {
   render() {
-    console.log(this.props)
     return <Link to={"/characters/" + this.props.name}> {this.props.name} </Link> 
   }
 }
