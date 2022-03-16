@@ -47,5 +47,5 @@ function Equipment({ item }) {
     console.log(thisItem)    
 
     //todo: put all the item stats into an array and display the array, rather than making a string method.
-    return (<div>{viewer}</div>)
+    return (<div>{thisItem.name}</div>)
 }
