@@ -37,11 +37,11 @@ export default function Character() {
 function Equipment({ item }) {
 
     var viewer = item.id
-    const [thisItem, setThisItem] = useState([])
+    const [thisItem, setThisItem] = useState({"default": 0})
 
-    fetch("https://api.guildwars2.com/v2/items/" + item.id)
-        .then(response => response.json())
-        .then(json => setThisItem(json))
+    // fetch("https://api.guildwars2.com/v2/items/" + item.id)
+    //     .then(response => response.json())
+    //     .then(json => setThisItem(json))
      
     console.log(thisItem)    
 
