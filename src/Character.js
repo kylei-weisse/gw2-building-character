@@ -40,11 +40,9 @@ function Equipment({ item }) {
     const [thisItem, setThisItem] = useState([])
 
     if(thisItem.length === 0){
-            console.log(thisItem, "beginning of fetch")
             fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
             .then(json => setThisItem(json))         
-            console.log(thisItem, "end of fetch")
     }
     //looks like it's not going into this, which means that thisItem.length!=0
     console.log(thisItem)    
