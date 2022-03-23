@@ -42,7 +42,9 @@ function Equipment({ item }) {
     // fetch("https://api.guildwars2.com/v2/items/" + item.id)
     //     .then(response => response.json())
     //     .then(json => setThisItem(json))
-     
+    
+    //why did I take this out? What's wrong with it?
+
     console.log(thisItem)    
 
     //todo: put all the item stats into an array and display the array, rather than making a string method.
