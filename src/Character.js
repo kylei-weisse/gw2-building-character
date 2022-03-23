@@ -40,9 +40,11 @@ function Equipment({ item }) {
     const [thisItem, setThisItem] = useState({"default": 0})
 
     if(thisItem.length === 0){
+            console.log(thisItem, "beginning of fetch")
             fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
             .then(json => setThisItem(json))         
+            console.log(thisItem, "end of fetch")
     }
     console.log(thisItem)    
     //ugh, now it's not populating. What happened?
