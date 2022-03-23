@@ -39,12 +39,6 @@ function Equipment({ item }) {
     var viewer = item.id
     const [thisItem, setThisItem] = useState({"default": 0})
 
-    // fetch("https://api.guildwars2.com/v2/items/" + item.id)
-    //     .then(response => response.json())
-    //     .then(json => setThisItem(json))
-    
-    //why did I take this out? What's wrong with it?
-
     if(thisItem.length === 0){
             fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
