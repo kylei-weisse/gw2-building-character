@@ -37,15 +37,16 @@ export default function Character() {
 function Equipment({ item }) {
 
     var viewer = item.id
-    const [thisItem, setThisItem] = useState({"default": 0})
+    const [thisItem, setThisItem] = useState(0)
 
-    if(thisItem.length === 0){
+    if(thisItem.length == 0){
             console.log(thisItem, "beginning of fetch")
             fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
             .then(json => setThisItem(json))         
             console.log(thisItem, "end of fetch")
     }
+    //looks like it's not going into this, which means that thisItem.length!=0
     console.log(thisItem)    
     //ugh, now it's not populating. What happened?
 
