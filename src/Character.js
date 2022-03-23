@@ -37,9 +37,9 @@ export default function Character() {
 function Equipment({ item }) {
 
     var viewer = item.id
-    const [thisItem, setThisItem] = useState(0)
+    const [thisItem, setThisItem] = useState([])
 
-    if(thisItem.length == 0){
+    if(thisItem.length === 0){
             console.log(thisItem, "beginning of fetch")
             fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
