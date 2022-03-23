@@ -4,13 +4,6 @@ import { Link } from "react-router-dom"
 import { token } from './Api'
 import './App.css';
 
-//component lifecycle, relevant here:
-//first constructor
-//then render
-//finally componentDidMount()
-
-
-
 //CharacterList
 //TODO: turn this into a router with dynamic routing, so each character you click on is a link, and any new characters/ different accounts are also links.
 export default class CharacterList extends React.Component {
