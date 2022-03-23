@@ -45,6 +45,7 @@ function Equipment({ item }) {
             .then(json => setThisItem(json))         
     }
     console.log(thisItem)    
+    //ugh, now it's not populating. What happened?
 
     //todo: put all the item stats into an array and display the array, rather than making a string method.
     return (<div>{thisItem.name}</div>)
