@@ -36,15 +36,14 @@ export default function Character() {
 
 function Equipment({ item }) {
 
-    var viewer = item.id
     const [thisItem, setThisItem] = useState([])
 
-    if(thisItem.length === 0){
-            fetch("https://api.guildwars2.com/v2/items/" + item.id)
+    if (thisItem.length === 0) {
+        fetch("https://api.guildwars2.com/v2/items/" + item.id)
             .then(response => response.json())
-            .then(json => setThisItem(json))         
+            .then(json => setThisItem(json))
     }
-    console.log(thisItem)    
+    console.log(thisItem)
     /*
     thisItem is sucessfully loading every piece of equipment, but several times. 
     The best practice way to do it is more complicated than I'm capable of doing easily or enjoyably,
