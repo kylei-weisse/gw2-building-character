@@ -44,10 +44,9 @@ function Equipment({ item }) {
             .then(response => response.json())
             .then(json => setThisItem(json))         
     }
-    //looks like it's not going into this, which means that thisItem.length!=0
     console.log(thisItem)    
-    //ugh, now it's not populating. What happened?
 
-    //todo: put all the item stats into an array and display the array, rather than making a string method.
+
+    //todo: put all the item stats into an array and display the array.
     return (<div>{thisItem.name}</div>)
 }
