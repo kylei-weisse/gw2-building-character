@@ -45,7 +45,13 @@ function Equipment({ item }) {
             .then(json => setThisItem(json))         
     }
     console.log(thisItem)    
-
+    /*
+    thisItem is sucessfully loading every piece of equipment, but several times. 
+    The best practice way to do it is more complicated than I'm capable of doing easily or enjoyably,
+    so maybe a way to check better if it's done?
+    I also need to put every piece of thisItem's object that I'm using into a usable array, which is likely
+    to make some ugly code but that might be necessary. I was hoping I could use a case statement.
+    */
 
     //todo: put all the item stats into an array and display the array.
     return (<div>{thisItem.name}</div>)
