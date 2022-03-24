@@ -59,5 +59,5 @@ function Equipment({ item }) {
     */
 
     //todo: put all the item stats into an array and display the array.
-    return (<div>{thisItem.name}</div>)
+    return (<div>{thisItem.name}</div>) //TODO: return thisItem's row
 }
