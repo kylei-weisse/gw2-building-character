@@ -36,6 +36,12 @@ export default function Character() {
 
 function Equipment({ item }) {
 
+    //item state for thisItem, currently contains the entire thisItem object for each equipped Item.
+    //would it be better to include only what I need in state, or use the whole thing? the expensive
+    //process is the fetch, so yeah, I like how I'm doing it right now.
+    
+    //possible todo:
+    //change the fetch to get every item in a single fetch.
     const [thisItem, setThisItem] = useState([])
 
     if (thisItem.length === 0) {
