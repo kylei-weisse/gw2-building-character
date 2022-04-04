@@ -59,6 +59,6 @@ function Equipment({ item }) {
     */
 
     //right now this displays these things as a div, kinda blank? I should change this to add more formatting.
-    return (<div>{thisItem.name}, {thisItem.type}, level {thisItem.level}</div>) //TODO: return thisItem's row, rather than just a list of properties in a div.
+    return (<div>{thisItem.name}, {thisItem.type}, level {thisItem.level} {thisItem.rarity}</div>) //TODO: return thisItem's row, rather than just a list of properties in a div.
 
 }
