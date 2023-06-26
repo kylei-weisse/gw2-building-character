@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+#Guild Wars 2 info
+this app is designed to get guild wars 2 info. My currrent MVP is just to get all equipment with its stats to show. The ideal goal of the project is to make a suggestion app, that tells you easy builds you can do with your current character based on Guild Jen and Metabattle. I assume once I have two websites being scrapped, adding snow crows will not be hard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REACT STUFF, left in for now while I'm unsure of what I'm doing.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
