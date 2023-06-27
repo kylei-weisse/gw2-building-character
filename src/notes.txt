@@ -9,3 +9,9 @@ step 3:
     integrate new backend to frontend
 step 4:
     add an app, ie with react native or an alternative
+
+step 5:
+    ???
+
+step 6:
+    profit!
