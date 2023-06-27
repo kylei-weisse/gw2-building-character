@@ -1,0 +1,11 @@
+just files
+
+step 1:
+    switch to hooks, ie use
+step 2:
+    add a backend, ie mothman
+    node/typescript, probably typescript
+step 3:
+    integrate new backend to frontend
+step 4:
+    add an app, ie with react native or an alternative
