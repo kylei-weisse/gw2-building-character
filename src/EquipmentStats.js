@@ -14,5 +14,16 @@ let itemStatExpertise       =0
 
 export default function EquipmentStats() {
     let params = useParams();
-    return ("https://api.guildwars2.com/v2/character" + params.characterID + "/equipment?access_token=" + params.token)
+    return ([
+        "https://api.guildwars2.com/v2/character" + params.characterID + "/equipment?access_token=" + params.token,
+        itemStatPower,
+        itemStatPrecision,
+        itemStatToughness,
+        itemStatVitality,
+        itemStatFerocity,
+        itemStatConditionDamage,
+        itemStatHealingPower,
+        itemStatConcentration,
+        itemStatExpertise
+    ])
 }

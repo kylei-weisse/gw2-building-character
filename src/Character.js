@@ -51,16 +51,7 @@ function Equipment({ item }) {
             .then(response => response.json())
             .then(json => setThisItem(json))
     }
-    //console.log(thisItem)
-    /*
-    thisItem is sucessfully loading every piece of equipment, but several times. 
-    The best practice way to do it is more complicated than I'm capable of doing easily or enjoyably,
-    so maybe a way to check better if it's done?
-    I also need to put every piece of thisItem's object that I'm using into a usable array, which is likely
-    to make some ugly code but that might be necessary. I was hoping I could use a case statement.
-    */
 
-    //right now this displays these things as a div, kinda blank? I should change this to add more formatting.
     return (<div>{thisItem.name}, {thisItem.type}, level {thisItem.level} {thisItem.rarity}</div>) //TODO: return thisItem's row, rather than just a list of properties in a div.
 
 }
