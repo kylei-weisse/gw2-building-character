@@ -11,7 +11,7 @@ let itemStatConditionDamage =0
 let itemStatHealingPower    =0
 let itemStatConcentration   =0
 let itemStatExpertise       =0
-
+//testing
 export default function EquipmentStats() {
     let params = useParams();
     return ([
