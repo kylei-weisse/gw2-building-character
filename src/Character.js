@@ -18,6 +18,8 @@ export default function Character() {
     }
 
     return (
+        //looks like this is where the actual character display is
+        //so I should put the item stats inside the div I think
         <>
             <h1> hello {params.characterID}! </h1>
             {
@@ -49,7 +51,7 @@ function Equipment({ item }) {
             .then(response => response.json())
             .then(json => setThisItem(json))
     }
-    console.log(thisItem)
+    //console.log(thisItem)
     /*
     thisItem is sucessfully loading every piece of equipment, but several times. 
     The best practice way to do it is more complicated than I'm capable of doing easily or enjoyably,
